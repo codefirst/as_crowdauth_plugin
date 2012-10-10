@@ -1,0 +1,40 @@
+.yield
+ %style{:type => 'text/css'}
+  :sass
+   .login-left
+    :width 30%
+    :float left
+    :text-align right
+   .login-right
+    :width 70%
+    :float right
+ =form_for :crowdauth, :url => {:controller => :crowdauth, :action => :login} do |form|
+  %fieldset
+   %legend{:align => :center}= t(:login)
+   %div
+    .login-left
+     =label :login, :username, t(:username) + ":"
+    .login-right
+     =text_field :login, :username, {:class => :text, :placeholder => t(:input_your_username)}
+    .clear
+    .login-left
+     =label :login, :password, t(:password) + ":"
+    .login-right
+     =password_field :login, :password, {:class => :text, :placeholder => t(:input_your_password)}
+    .clear
+   %legend{:align => :center, :style => "width:100%"}= t(:update_your_profile)
+   %div
+    .login-left
+     =label :login, :name, t(:name) + ":"
+    .login-right
+     =text_field :login, :name, {:class => :text}
+    .clear
+   %div
+    .login-left
+     =label :login, :image_url, t(:image_url) + ":"
+    .login-right
+     =text_field :login, :image_url, {:class => :text}
+    .clear
+   %div{:style => "text-align:center;margin:10px;"}
+    =submit_tag t(:login), :class => "submit red button large"
+
