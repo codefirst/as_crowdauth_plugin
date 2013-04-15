@@ -1,1 +1,1 @@
-gem 'rest-client'
+gem 'omniauth_crowd'

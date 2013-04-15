@@ -1,8 +1,0 @@
-en:
- username: Crowd username
- password: Crowd password
- input_your_username: your username
- input_your_password: your password
- update_your_profile: Update your profile
- name: Name
- image_url: Profile image URL
